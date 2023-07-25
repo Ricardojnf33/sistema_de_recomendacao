@@ -11,6 +11,7 @@ st.header('Carregando e Pré-processando os Dados')
 df = pd.read_csv('notebooks/supermarket_sales.csv')
 df['ID da Fatura 2'] = range(len(df))
 df['Data'] = pd.to_datetime(df['Data'])
+df['ID da Fatura'] = range(len(df))
 
 st.write(df.head())
 
